@@ -70,7 +70,7 @@ for n in range(-5,3,2):
     print(f"counting = {n}")
     
 print("-------example 5: for loop in a list--------") 
-colors = ['magenta'. 'babyblue', 'olive']
+colors = ['magenta', 'babyblue', 'olive']
 
 for c in colors:
     print(f"color = {c}")
