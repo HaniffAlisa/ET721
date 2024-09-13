@@ -44,26 +44,31 @@ print(word_count_dict)
 
 print("\n -------Excerise---------")
 #given the following user list, find the number of users that use 'gmail', 'hotmail', and 'yahoo'
-user = {
-peter = ppan@gmail.com
-diana = d@hotmail.com
-Kent = ckent@yahoo.com
-Bruce = bwayne@hotmail.com
-Tony  = tstark@gmail.com
-shrek = shrek@gmail.com
+
+user = [
+    'ppan@gmail.com',
+    'd@hotmail.com',
+    'ckent@yahoo.com',
+    'bwayne@hotmail.com',
+    'tstark@gmail.com',
+    'shrek@gmail.com'
+]
+
+email_counts = {
+    'gmail': 0,
+    'hotmail': 0,
+    'yahoo': 0
 }
-user = user.split()
-#test
-user1 = user[2]
-check1 = '@hotmail' in user1
-print(user[2].split())
+for email in user:
+    email_part, domain = email.split('@')
+    domain_name = domain.split('.')[0]
+    
+    if domain_name in email_counts:
+       email_counts[domain_name] += 1
 
-email_count = {}   #empty dictionary
-for word in phrase:
-    if word not in user:
-        email_count[word] = 1
-    else:
-        email_count[word] += 1
-print(email_count)      
+print("Gmail users:", email_counts['gmail'])
+print("Hotmail users:", email_counts['hotmail'])
+print("Yahoo users:", email_counts['yahoo'])
 
-#loop to go through each word
+
+
