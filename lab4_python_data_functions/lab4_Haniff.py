@@ -41,3 +41,29 @@ for word in phrase:
     else:
         word_count_dict[word] += 1
 print(word_count_dict)      
+
+print("\n -------Excerise---------")
+#given the following user list, find the number of users that use 'gmail', 'hotmail', and 'yahoo'
+user = {
+peter = ppan@gmail.com
+diana = d@hotmail.com
+Kent = ckent@yahoo.com
+Bruce = bwayne@hotmail.com
+Tony  = tstark@gmail.com
+shrek = shrek@gmail.com
+}
+user = user.split()
+#test
+user1 = user[2]
+check1 = '@hotmail' in user1
+print(user[2].split())
+
+email_count = {}   #empty dictionary
+for word in phrase:
+    if word not in user:
+        email_count[word] = 1
+    else:
+        email_count[word] += 1
+print(email_count)      
+
+#loop to go through each word
