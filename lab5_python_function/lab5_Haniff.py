@@ -74,7 +74,3 @@ print("\n------Example 8: function that returns a Random numbers btw 1-6-------"
 print(f"dice number = {random.randint(1,6)}")
 
 
-
-#exercise 
-#guessNumber(min_num, max_num):
-#	random has to be btw min and max_num
