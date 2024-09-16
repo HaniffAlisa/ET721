@@ -10,3 +10,11 @@ define a function that compares a guess number. The guess number is defined as a
 "You got it!" if the number is equal to the guess number
 Submission: 
 """
+import random
+
+def guessNum(min,max):
+    if(min<max):
+        return True
+    else:
+        return False
+print(f"The guess nummber is: {random.randint(10,20)}")
