@@ -12,9 +12,24 @@ Submission:
 """
 import random
 
-def guessNum(min,max):
-    if(min<max):
-        return True
+def guess_num():
+    guess = random.randint(10, 20)
+    num_2 = random.randint(10, 20)
+    return guess, num_2
+
+# Generate the guess and num_2
+guess, num_2 = guess_num()
+
+print("Guess number:", guess)
+print("The second number:", num_2)    
+
+def compare_guess(guess, num_2):
+    if num_2 < guess:
+        print("The number is smaller than the guess number")
+    elif num_2 > guess:
+        print("The number is bigger than the guess number")
     else:
-        return False
-print(f"The guess nummber is: {random.randint(10,20)}")
+        print("You got it!")
+
+# Compare the numbers
+compare_guess(guess, num_2)
