@@ -21,3 +21,20 @@ def hour_ratio():
 
 print(hour_ratio())
 print("/n ------End of program--------/n")
+
+
+print("/n-------Example 2: classes-----")
+#define a class named 'complex'
+class Complex:
+    def __init__(self, realpart, imgpart):
+        self.r = realpart
+        self.i = imgpart
+# create an instance of the class
+point1 = Complex(3.0, -4.5)
+
+# calling the instance object
+real1 = point1.r
+imag1 = point1.i
+
+# prompt result
+print(f"real number = {real1} with imaginary number = {imag1} ")        
