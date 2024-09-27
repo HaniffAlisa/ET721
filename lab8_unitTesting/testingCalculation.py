@@ -13,7 +13,7 @@ class TestCalculation(unittest.TestCase):
         self.assertEqual(calculation.addThreeNumbers(),0)
     
     def test_subtractTwoNumbers(self):
-        self.assert_subractTwoNumbers(calculation.subtractTwoNumbers(2,8), -6)
+        self.assert_subtractTwoNumbers(calculation.subtractTwoNumbers(2,8), -6)
         self.assert_subractTwoNumbers(calculation.subtractTwoNumbers(8,2), 6)
     
     def test_divideTwoNumbers(self):
