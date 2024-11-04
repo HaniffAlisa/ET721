@@ -2,33 +2,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lab 11 by _______</title>
-<link rel="stylesheet" href="{% static 'doliststyle.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11 by _______</title>
+    <link rel="stylesheet" href="{% static 'doliststyles.css' %}">
 </head>
 <body>
-<main class="maincontainer">
-<h1 class="apptitle">To do list by ________ </h1>
-<form class="dolistform">
-<section class="formgroup">
-<label for="task">What to do?...</label>
-<input type="text" id="task" class="todo_text"
-placeholder="type your task...">
-<button class="btnadd">ADD TO LIST</button>
-</section>
-<section class="formgroup">
-<button class="btn_deleteeach">DELETE COMPLETED</button>
-<button class="btn_deleteall">DELETE ALL</button>
-</section>
-<section class="formgroup">
-<h3>Added to list</h3>
-<ul>
-<li>Finish Django lab 11</li>
-</ul>
-</section>
-</form>
-</main>
+    <main class="maincontainer">
+        <h1 class="apptitle">To do list by ________ </h1>
+        <form class="dolistform">
+            <section class="formgroup">
+                <label for="task">What to do?...</label>
+                <input type="text" id="task" class="todo_text"
+                    placeholder="type your task...">
+                <button class="btnadd">ADD TO LIST</button>
+            </section>
+            <section class="formgroup">
+                <button class="btn_deleteeach">DELETE COMPLETED</button>
+                <button class="btn_deleteall">DELETE ALL</button>
+            </section>
+            <section class="formgroup">
+                <h3>Added to list</h3>
+                
+                    <ul class="todo_task">
+                        {% for task in todo_tasks %}
+                            <li class="listitem">{{ task.text }}</li>
+                        {% endfor %}
+                    </ul>
+                    <ul class="listdo">
+                        <li class="listitem">Finish Django lab 11</li>
+                        <li class="listitem completed">Testing completed</li>
+                        </ul>
+            </section>
+        </form>
+    </main>
 </body>
 </html>
-

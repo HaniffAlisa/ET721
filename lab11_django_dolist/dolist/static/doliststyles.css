@@ -1,29 +1,73 @@
-*{box-sizing: border-box;}
-.maincontainer{
-width: 800px;
-background-color: aliceblue;
-margin: 5em auto;
-padding: 2em;
+* {
+    box-sizing: border-box;
 }
-.apptitle{text-align: center;}
-.dolistform{margin-top: 2em;}
-.formgroup{margin-top: 2em;}
-.todo_text{padding: 0.5em; border-radius: 5px; border: solid gray 1px; width: 400px;}
-.btnadd, .btn_deleteeach, .btn_deleteall{
-border: none;
-padding: 0.5em 2em;
-border-radius: 5px;
-color: whitesmoke;
+
+.maincontainer {
+    width: 800px;
+    background-color: aliceblue;
+    margin: 5em auto;
+    padding: 2em;
 }
-.btnadd{background-color: olive;}
-.btn_deleteall, .btn_deleteeach{
-background-color: crimson;
+
+.apptitle {
+    text-align: center;
 }
-.btn_deleteall:hover, .btn_deleteeach:hover{
-background-color: darkred;
-font-weight: bolder;
+
+.dolistform {
+    margin-top: 2em;
 }
-.btnadd:hover{
-background-color:darkred;
-cursor: pointer;
+
+.formgroup {
+    margin-top: 2em;
 }
+
+.todo_text {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: solid gray 1px;
+    width: 400px;
+}
+
+.btnadd,
+.btn_deleteeach,
+.btn_deleteall {
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.btnadd {
+    background-color: olive;
+}
+
+.btn_deleteall,
+.btn_deleteeach {
+    background-color: crimson;
+}
+
+.btn_deleteall:hover,
+.btn_deleteeach:hover {
+    background-color: darkred;
+    font-weight: bolder;
+}
+
+.btnadd:hover {
+    background-color: darkred;
+    cursor: pointer;
+}
+/*TO DO LIST*/
+.listdo{
+    padding:0px;
+    }
+.listitem{
+    padding: 20px;
+    background-color: rgb(230,230,230);
+    list-style: none;
+}
+.completed{
+    color: whitesmoke;
+    text-decoration: line-through;
+    background-color: rgb(50,50,50);
+}
+    
