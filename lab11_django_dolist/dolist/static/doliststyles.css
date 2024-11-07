@@ -28,9 +28,7 @@
     width: 400px;
 }
 
-.btnadd,
-.btn_deleteeach,
-.btn_deleteall {
+.btnadd, .btn_deleteeach, .btn_deleteall {
     border: none;
     padding: 0.5em 2em;
     border-radius: 5px;
@@ -39,15 +37,15 @@
 
 .btnadd {
     background-color: olive;
+    width: 30%;
 }
 
-.btn_deleteall,
-.btn_deleteeach {
+.btn_deleteall, .btn_deleteeach {
     background-color: crimson;
+    width: 49%;
 }
 
-.btn_deleteall:hover,
-.btn_deleteeach:hover {
+.btn_deleteall:hover, .btn_deleteeach:hover {
     background-color: darkred;
     font-weight: bolder;
 }
@@ -56,18 +54,36 @@
     background-color: darkred;
     cursor: pointer;
 }
-/*TO DO LIST*/
-.listdo{
-    padding:0px;
-    }
-.listitem{
+
+.listdo {
+    padding: 0px;
+}
+
+.listitem {
     padding: 20px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(230, 230, 230);
+    border-bottom: gray dashed 1px;
     list-style: none;
 }
-.completed{
+
+.completed {
     color: whitesmoke;
     text-decoration: line-through;
-    background-color: rgb(50,50,50);
+    background-color: rgb(50, 50, 50);
 }
-    
+
+.linkitem {
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+}
+
+.linkitem:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.trashicon {
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 10px;
+}
