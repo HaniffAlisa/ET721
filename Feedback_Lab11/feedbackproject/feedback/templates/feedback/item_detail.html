@@ -1,0 +1,19 @@
+<!-- feedback/templates/feedback/item_detail.html -->
+<h1>{{ item.name }}</h1>
+<p>Average Rating: {{ feedbacks|length|default:0 }}</p>
+
+<h2>Feedback</h2>
+<ul>
+    {% for feedback in feedbacks %}
+        <li>
+            <strong>{{ feedback.rating }}/5</strong> - {{ feedback.comment }}
+        </li>
+    {% endfor %}
+</ul>
+
+<h2>Submit Feedback</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
