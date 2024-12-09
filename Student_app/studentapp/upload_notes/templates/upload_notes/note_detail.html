@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ note.title }}</title>
+</head>
+<body>
+    <h1>{{ note.title }}</h1>
+    <img src="{{ note.image.url }}" alt="{{ note.title }}">
+    <a href="{% url 'note_edit' note.pk %}">Edit Note</a>
+</body>
+</html>
