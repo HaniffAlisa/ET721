@@ -1,14 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/styles.css' %}">
 </head>
 <body>
-    <h1>Welcome to the My Student App</h1>
-    <ul>
-        <li><a href="{% url 'task_list' %}">To-Do List</a></li>
-        <li><a href="{% url 'post_list' %}">Blog</a></li>
-        <li><a href="{% url 'note_list' %}">Uploads</a></li>
-    </ul>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>My Student App</h1>
+            </div>
+        </div>
+    </header>
+    <section class="main-content">
+        <div class="container">
+            <h2>Come In and Explore</h2>
+            <p>Click on a link to create a list, write a blog, or upload an image.</p>
+            <div class="buttons">
+                <a href="{% url 'task_list' %}">To-Do List</a>
+                <a href="{% url 'post_list' %}">Blog</a>
+                <a href="{% url 'note_list' %}">Uploads</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
