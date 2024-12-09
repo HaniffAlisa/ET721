@@ -32,3 +32,10 @@ class TodoViewsTestCase(TestCase):
             #verify the new task was added
             self.assertEqual(Todolist.obect.count(), 3)
             self.assertTrue(Todolist.objects.filter(text="Task 3"). exists())
+
+        #test marking a valid to do complete
+        def test_completed_todo_valid(self):
+            response = self.client.post(reverse(completedTodo, args =[self.task1.id]))
+            self.assertEqual(response.status_code, 302)
+            self.task1.refresh_form_db()
+            self.assertTrue(self.task1.completed)    
