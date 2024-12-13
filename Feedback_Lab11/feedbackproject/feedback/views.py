@@ -4,7 +4,8 @@ from .forms import FeedbackForm
 from django.db.models import Avg
 
 def homepage(request):
-    return render(request, 'feedback/homepage.html')
+    items = Item.objects.all()
+    return render(request, 'feedback/homepage.html', {'items': items})
 
 def item_detail(request, item_id):
     item = get_object_or_404(Item, id=item_id)
