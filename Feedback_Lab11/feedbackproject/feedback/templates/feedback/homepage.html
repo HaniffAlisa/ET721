@@ -1,15 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Feedback Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback System</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Welcome to the Feedback System!</h1>
-    <h2>Leave Your Feedback</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit Feedback</button>
-    </form>
+    <header>
+        <h1>Welcome to the Feedback System!</h1>
+    </header>
+    <main>
+        <!-- Homepage Content -->
+        <h2>Items</h2>
+        <p><a href="{% url 'feedback_list' %}">View Items and Feedback</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Feedback System</p>
+    </footer>
 </body>
 </html>
